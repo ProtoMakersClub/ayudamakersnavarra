@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.title-logo {
+    background: inherit;
+	color: white;
+    text-decoration: none;
+	font-family: 'Chelsea Market', sans-serif;
+	font-size: 18px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+body #qLoverlay {
+    background-color: #111;
+    position: fixed;
+    z-index: 666999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	font-family: "Roboto Mono",monospace;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html, body, #container {
+  height: 100%;
+/*  overflow: hidden; */
+  width: 100%;
+}
+body {
+  /* height of .navbar, customize with @navbar-height variable */
+  padding-top: 55px;
+}
+
+#map {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: auto;
+}
+
+
+
+.btn-decorator .btn-link::after {
+    border-bottom: 2px solid;
+    content: "";
+    display: block;
+    height: 1px;
+/*    left: -1px; */
+    margin-top: -3px;
+    position: relative;
+    top: 3px;
+    transform: scale(0, 1);
+    transform-origin: center center 0;
+    transition: all 0.15s ease-out 0s;
+    width: 100%;
+}
+
+.btn-decorator .btn-link:hover::after, .btn-decorator .btn-link:focus::after {
+    transform: scale(1, 1);
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+.fade.show {
+    opacity: 1;
+}
+
+
+/* Mirar */
+@charset "utf-8";
+
+*:focus {
+    outline: none;
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+.header .main-nav .nav .nav-item a {
+    display: inline-block;
+}
+.nav-link {
+    display: inline-block;
+}
+
+}
