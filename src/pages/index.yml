@@ -1,0 +1,22 @@
+title: Puntos de recogida en Navarra
+description: Mapa con los puntos de recogida para el COVID-19 en Navarra.
+
+site:
+  name: Puntos de recogida COVID-19 Navarra
+  url: http://localhost
+  description: Mapa con los puntos de recogida para el COVID-19 en Navarra.
+  author: MakersNavarra
+og:
+  title: Puntos de recogida en Navarra
+  description: Mapa con los puntos de recogida para el COVID-19 en Navarra.
+  type: article
+  image: http(s)://url-de-la-imagen-og
+  locale: es
+twitter:
+  card: summary
+  title: Puntos de recogida en Navarra
+  description: Mapa con los puntos de recogida para el COVID-19 en Navarra.
+  site: '@AyudaMakersNAV'
+  creator: '@AyudaMakersNAV'
+  image: http(s)://url-de-la-imagen-twitter
+

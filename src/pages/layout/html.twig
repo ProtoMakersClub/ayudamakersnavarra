@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{title}}</title>
+    <meta name="title" content="{{title}} | {{site.name}}" />
+    <meta name="description" content="{{description}}">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="{{twitter.card}}">
+    <meta name="twitter:site" content="{{twitter.site}}">
+    <meta name="twitter:title" content="{{twitter.title}}">
+    <meta name="twitter:description" content="{{twitter.description}}">
+    <meta name="twitter:creator" content="{{twitter.creator}}">
+    <!-- Las imágenes de sumario de Twitter deben ser de al menos 200x200px -->
+    <meta name="twitter:image" content="{{twitter.image}}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{og.title}}" />
+    <meta property="og:description" content="{{og.description}}" />
+    <meta property="og:type" content="{{og.type}}" />
+    <meta property="og:url" content="{{site.url}}" />
+    <meta property="og:site_name" content="{{site.name}}">
+    <meta property="og:image" content="{{og.image}}" />
+    <meta property="og:locale" content="{{og.locale}}" />
+
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+        <script src="/js/app.js"></script>
+    </body>
+</html> 
