@@ -1,5 +1,8 @@
 # Puntos de Recogida para material en Navarra.
 
+## DATOS
+Los datos para generar esta página estan agrupados en el archivo JSON: `json/navarra.json`
+
 ## Requisitos
 - NodeJs version 10 o superior. [https://nodejs.org/es/](https://nodejs.org/es/)
 
