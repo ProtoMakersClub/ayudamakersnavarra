@@ -12,7 +12,7 @@
     var mapConfig = mapConfigValues['navarra'];
 
     var jsonFile = 'navarra.json';
-    if(window.location.pathname === '/pamplona'){
+    if(window.location.pathname === '/pamplona' || window.location.pathname === '/pamplona/'){
         jsonFile = 'pamplona.json'
         mapConfig =  mapConfigValues['pamplona'];
     }
