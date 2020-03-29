@@ -28,7 +28,13 @@
             .then(function(data){
                 L.geoJson(data, {
                     onEachFeature: function(feature,layer){
-                        layer.bindPopup("<b>"+feature.properties.entidad+"</b><br>"+feature.properties.municipio+" ("+feature.properties.telefono+")<br>" + feature.properties.horario + "<br>" + feature.properties.notas);
+                        var notas = (feature.properties.notas) ? feature.properties.notas: '' ;
+                        var popupData = "<b>"+feature.properties.entidad+"</b>";
+                        popupData += "<br>"+feature.properties.municipio +" ("+feature.properties.telefono + ")<br>" + feature.properties.horario;
+                        if(typeof feature.properties.notas != 'undefined'){
+                            popupData += '<br>' + notas;
+                        }
+                        layer.bindPopup( popupData );
                     }
                 }).addTo(map);
 
