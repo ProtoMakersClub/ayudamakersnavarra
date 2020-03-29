@@ -1,4 +1,4 @@
-# Puntos de Recogida para material.
+# Puntos de Recogida para material en Navarra.
 
 ## Requisitos
 - NodeJs version 10 o superior. [https://nodejs.org/es/](https://nodejs.org/es/)

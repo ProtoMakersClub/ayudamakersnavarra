@@ -1,4 +1,56 @@
 {% extends "@layout/page.twig" %}
 {% block page %}
-
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-8">
+                    <h1 class="text-center">Puntos de Entrega de Protectores Faciales</h1>
+                    <p>Estos son las formas de recogida de material producido en impresoras 3D para la <strong>Comarca de Pamplona</strong> y los puntos de recogida en el resto de <strong>Navarra</strong>:</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-4 mt-2">
+                    <a href="#pamplona" class="btn btn-secondary btn-lg btn-block">Pamplona y Comarca</a>
+                </div>
+                <div class="col-sm-12 col-md-4 mt-2">
+                    <a href="#navarra" class="btn btn-secondary btn-lg btn-block">Navarra</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pamplona">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2>Pamplona y Comarca</h2>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8 col-sm-12">
+                    <p><strong>Policía Municipal de Pamplona, Cruz Roja, DYA. </strong>
+                    Se encargan de <strong>recoger y distribuir</strong> en <strong>Pamplona</strong> las pantallas faciales de protección contra el coronavirus impresas en 3D para el personal sanitario.
+                    </p>	
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                {% for element in datosNavarra.features %}
+                    {% if element.properties.comarca == "pamplona" %}
+                        {% include '@includes/mas-info-element.twig' with {element:element} %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section id="navarra">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2>Navarra</h2>
+            </div>
+            <div class="row justify-content-center">
+                {% for element in datosNavarra.features %}
+                    {% if element.properties.comarca != "pamplona" %}
+                        {% include '@includes/mas-info-element.twig' with {element:element} %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

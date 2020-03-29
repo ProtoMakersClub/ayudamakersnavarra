@@ -1,0 +1,21 @@
+title: Puntos de recogida en Pamplona y comarca
+description: Mapa con los puntos de recogida para el COVID-19 en Pamplona y comarca.
+
+site:
+  name: Puntos de recogida COVID-19 Pamplona y comarca
+  url: http://localhost
+  description: Mapa con los puntos de recogida para el COVID-19 en Pamplona y comarca.
+  author: MakersNavarra
+og:
+  title:  Puntos de recogida COVID-19 Pamplona y comarca
+  description: Mapa con los puntos de recogida para el COVID-19 en Pamplona y comarca.
+  type: article
+  image: http(s)://url-de-la-imagen-og
+  locale: es
+twitter:
+  card: summary
+  title: Puntos de recogida COVID-19 Pamplona y comarca
+  description: Mapa con los puntos de recogida para el COVID-19 en Pamplona y comarca.
+  site: '@AyudaMakersNAV'
+  creator: '@AyudaMakersNAV'
+  image: http(s)://url-de-la-imagen-twitter

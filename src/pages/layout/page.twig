@@ -1,7 +1,9 @@
  {% extends "@layout/html.twig" %}
  {% block body %}
     {% include '@includes/header.twig' %}
-    {% block page %}
- 
-    {% endblock %}
+      <div id="main">
+         {% block page %}
+   
+         {% endblock %}
+      </div>
  {% endblock %}

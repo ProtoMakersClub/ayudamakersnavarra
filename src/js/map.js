@@ -11,9 +11,7 @@
     }
     var mapConfig = mapConfigValues['navarra'];
 
-    var jsonFile = 'navarra.json';
     if(window.location.pathname === '/pamplona' || window.location.pathname === '/pamplona/'){
-        jsonFile = 'pamplona.json'
         mapConfig =  mapConfigValues['pamplona'];
     }
 
@@ -39,10 +37,8 @@
         });
     
     function popUpInfo(feature, layer) {
-        // ¿Esta característica tiene una propiedad llamada popupContent?
         if (feature.properties && feature.properties.punto_entrega) {
             layer.bindPopup("<b>"+feature.properties.punto_entrega+"</b><br>"+feature.properties.municipio+" ("+feature.properties.telefono+")");
-            //layer.bindPopup("<b>"+feature.properties.punto_entrega);
         }
     }
    

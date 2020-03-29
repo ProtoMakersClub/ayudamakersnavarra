@@ -32,6 +32,9 @@ var paths = {
     pages: {
         src: "src/pages"
     },
+    static: {
+        src: "src/static"
+    },
     mapJsons: {
         src: 'json',
         destination: 'json'
@@ -53,6 +56,10 @@ var options = {
     pages: {
         baseSrc: path.join(paths.pages.src),
         files: path.join(paths.pages.src, '**/index.twig'),
+        destination: path.join(paths.baseDestination),
+    },
+    static: {
+        files: path.join(paths.static.src, '**/**'),
         destination: path.join(paths.baseDestination),
     },
     mapJsons: {
@@ -110,6 +117,12 @@ gulp.task('map-jsons', function () {
     .pipe(gulp.dest(options.mapJsons.destination))
 });
 
+gulp.task('static', function () {
+    return gulp.src([
+        options.static.files
+    ])
+    .pipe(gulp.dest(options.baseDestination))
+});
 
 
 var twigConfigs = {
@@ -168,6 +181,12 @@ gulp.task('pages', function () {
         return  data;
    
     }))
+    .pipe(data(function(file){
+        
+        return {
+            datosNavarra: require('./json/navarra.json')
+        }
+    }))
     
     //Render via Twig plugin
     .pipe(twig(twigConfigs))
@@ -198,4 +217,4 @@ gulp.task('watch:src', function () {
 });
 gulp.task('watch', gulp.parallel('watch:jsons','watch:src'));
 
-gulp.task('serve',gulp.series('build','browser-sync','watch','map-jsons'));
+gulp.task('serve',gulp.series('build','browser-sync','watch','map-jsons','static'));
