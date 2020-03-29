@@ -13,3 +13,7 @@ Los datos para generar esta página estan agrupados en el archivo JSON: `json/na
 
 ## Lanzar el entorno de desarrollo
 - `npm start`
+
+
+## ToDO:
+- PopUp mapa con más datos.

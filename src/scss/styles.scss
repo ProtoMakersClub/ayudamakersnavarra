@@ -1,11 +1,14 @@
 @import 'variables.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+body {
+    overflow: hidden;
+}
 
 #map {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
 #main {
     padding-top: 56px;

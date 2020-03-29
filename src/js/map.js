@@ -26,20 +26,15 @@
                 return response.json();
             })
             .then(function(data){
-                console.log(data);
-                
-
                 L.geoJson(data, {
-                    onEachFeature: popUpInfo
+                    onEachFeature: function(feature,layer){
+                        layer.bindPopup("<b>"+feature.properties.entidad+"</b><br>"+feature.properties.municipio+" ("+feature.properties.telefono+")<br>" + feature.properties.horario + "<br>" + feature.properties.notas);
+                    }
                 }).addTo(map);
 
             })
         });
     
-    function popUpInfo(feature, layer) {
-        if (feature.properties && feature.properties.punto_entrega) {
-            layer.bindPopup("<b>"+feature.properties.punto_entrega+"</b><br>"+feature.properties.municipio+" ("+feature.properties.telefono+")");
-        }
-    }
+
    
 }(window.jQuery, window, document));
