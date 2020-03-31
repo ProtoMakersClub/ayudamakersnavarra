@@ -3,16 +3,17 @@
 
 body.index, body.pamplona {
     overflow: hidden;
+    margin: 0;
 }
-
+#main{
+    margin-top: 56px;
+}
 #map {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    height: 100vh;
+    height: calc(100vh - 56px);
     width: 100%;
   }
-#main {
-    padding-top: 56px;
-}
+
 
 section {
     padding-top: 24px;
